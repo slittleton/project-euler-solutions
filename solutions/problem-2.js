@@ -1,4 +1,3 @@
-
 /*
 Project Euler - Problem 2
 
@@ -11,18 +10,14 @@ By considering the terms in the Fibonacci sequence whose values do not exceed
 four million, find the sum of the even-valued terms.
 */
 
-
-
 let arr = [1,2]
 let x = 0;
 while(x < 4000000){
-    // create array of fib sequence numbers less than 4000000
     x = arr[arr.length-1] + arr[arr.length-2]
     if(x >= 4000000){break}
     arr.push(x);
 }
-arr = arr.filter(elem => elem % 2 === 0)
+arr = arr.filter( elem => elem % 2 === 0 )
           .reduce( (elem, acc) => elem + acc )
-
 
 console.log(arr);
